@@ -13,10 +13,10 @@
 </head>
 <body class="bg-[#F8FAFC] min-h-screen">
     <!-- HEADER -->
-     <header class="bg-[#F8FAFC] sticky top-0 z-10">
-        <div id="header-container" class="w-8/12 mx-auto p-5 space-y-5 border-b border-gray-200 pb-8">
+     <header class="bg-[#F8FAFC] sm:sticky sm:top-0 z-10">
+        <div id="header-container" class="w-11/12 sm:w-8/12 mx-auto p-5 space-y-5 border-b border-gray-200 pb-8">
             <h2 class="text-[32px] font-bold">Job Application Tracker</h2>
-            <div id="tabs" class="grid grid-cols-3 gap-4">
+            <div id="tabs" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <!-- TAB-1 -->
                 <div class="p-5 bg-white rounded-lg hover:shadow-lg">
                     <p>Total</p>
@@ -38,7 +38,7 @@
 
      <!-- MAIN SECTION -->
       <main>
-        <section id="main-container" class="w-8/12 mx-auto p-5 space-y-5">
+        <section id="main-container" class="w-11/12 sm:w-8/12 mx-auto p-5 space-y-5">
             <!-- NAVIGATION SECTION -->
             <nav class="flex justify-between">
                 <div class="space-y-5">
@@ -46,8 +46,8 @@
                     <!-- NAV BUTTONS -->
                     <div id="all-nav-btns" class="flex gap-2">
                         <button class="btn btn-soft btn-primary px-8 bg-[#422ad5] text-white">All</button>
-                        <button class="btn btn-soft btn-primary px-8">Interview</button>
-                        <button class="btn btn-soft btn-primary px-8">Rejected</button>
+                        <button class="btn btn-soft btn-primary sm:px-8">Interview</button>
+                        <button class="btn btn-soft btn-primary sm:px-8">Rejected</button>
                     </div>
                 </div>
                 
@@ -61,7 +61,7 @@
                 <!-- CARDS -->
 
                 <!-- CARD 1 -->
-                <div class="info-card flex justify-between bg-white p-8 rounded-lg shadow-2xs">
+                <div class="info-card flex flex-col gap-5 sm:flex-row space-y-5 justify-between bg-white p-8 rounded-lg shadow-2xs">
                     <div class="space-y-4">
                         <div class="space-y-1">
                             <p class="title text-xl font-bold">Mobile First Corp</p>
@@ -86,7 +86,7 @@
                     </div>
                 </div>
                 <!-- CARD 2 -->
-                <div class="info-card flex justify-between bg-white p-8 rounded-lg shadow-2xs">
+                <div class="info-card flex flex-col gap-5 sm:flex-row space-y-5 justify-between bg-white p-8 rounded-lg shadow-2xs">
                     <div class="space-y-4">
                         <div class="space-y-1">
                             <p class="title text-xl font-bold">WebFlow Agency</p>
@@ -111,7 +111,7 @@
                     </div>
                 </div>
                 <!-- CARD 3 -->
-                <div class="info-card flex justify-between bg-white p-8 rounded-lg shadow-2xs">
+                <div class="info-card flex flex-col gap-5 sm:flex-row space-y-5 justify-between bg-white p-8 rounded-lg shadow-2xs">
                     <div class="space-y-4">
                         <div class="space-y-1">
                             <p class="title text-xl font-bold">DataViz Solutions</p>
@@ -137,7 +137,7 @@
                     </div>
                 </div>
                 <!-- CARD 4 -->
-                <div class="info-card flex justify-between bg-white p-8 rounded-lg shadow-2xs">
+                <div class="info-card flex flex-col gap-5 sm:flex-row space-y-5 justify-between bg-white p-8 rounded-lg shadow-2xs">
                     <div class="space-y-4">
                         <div class="space-y-1">
                             <p class="title text-xl font-bold">CloudFirst Inc</p>
@@ -162,7 +162,7 @@
                     </div>
                 </div>
                 <!-- CARD 5 -->
-                <div class="info-card flex justify-between bg-white p-8 rounded-lg shadow-2xs">
+                <div class="info-card flex flex-col gap-5 sm:flex-row space-y-5 justify-between bg-white p-8 rounded-lg shadow-2xs">
                     <div class="space-y-4">
                         <div class="space-y-1">
                             <p class="title text-xl font-bold">Innovation Labs</p>
@@ -187,7 +187,7 @@
                     </div>
                 </div>
                 <!-- CARD 6 -->
-                <div class="info-card flex justify-between bg-white p-8 rounded-lg shadow-2xs">
+                <div class="info-card flex flex-col gap-5 sm:flex-row space-y-5 justify-between bg-white p-8 rounded-lg shadow-2xs">
                     <div class="space-y-4">
                         <div class="space-y-1">
                             <p class="title text-xl font-bold">MegaCorp Solutions</p>
@@ -212,7 +212,7 @@
                     </div>
                 </div>
                 <!-- CARD 7 -->
-                <div class="info-card flex justify-between bg-white p-8 rounded-lg shadow-2xs">
+                <div class="info-card flex flex-col gap-5 sm:flex-row space-y-5 justify-between bg-white p-8 rounded-lg shadow-2xs">
                     <div class="space-y-4">
                         <div class="space-y-1">
                             <p class="title text-xl font-bold">StartupXYZ</p>
@@ -237,7 +237,7 @@
                     </div>
                 </div>
                 <!-- CARD 8 -->
-                <div class="info-card flex justify-between bg-white p-8 rounded-lg shadow-2xs">
+                <div class="info-card flex flex-col gap-5 sm:flex-row space-y-5 justify-between bg-white p-8 rounded-lg shadow-2xs">
                     <div class="space-y-4">
                         <div class="space-y-1">
                             <p class="title text-xl font-bold">TechCorp Industries</p>
@@ -265,14 +265,14 @@
              </div>
         </section>
 
-        <section id="hidden-section" class="w-8/12 mx-auto px-5 space-y-5 hidden">
+        <section id="hidden-section" class="w-8/12 mx-auto sm:px-5 space-y-5 hidden">
             <div class="flex flex-col justify-center items-center gap-5 border border-gray-100 rounded-lg p-16 bg-white "> 
                 <div>
                     <img src="./jobs.png" alt="">
                 </div>
-               <div class="text-center">
+               <div class="text-center space-y-2">
                     <h1 class="text-xl font-bold">No jobs available</h1>
-                    <p class="text-neutral/60">Check back soon for new job opportunities</p>
+                    <p class="text-neutral/60 text-xs sm:text-[16px]">Check back soon for new job opportunities</p>
                </div>
             </div>
         </section>
