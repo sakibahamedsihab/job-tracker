@@ -39,8 +39,16 @@ function tabFilter(navBtnPressed) {
 
 // CALCULATE COUNT FUNCTION
 function calculateCount(){
-    const currentCards = document.querySelectorAll('#all-card-container .info-card')
+    const total = document.querySelectorAll('#all-card-container .info-card').length;
+    totalEl.textContent = total;
+    const interview = document.querySelectorAll('[data-type="interview"]').length
+    // console.log(interview)
+    interviewEl.textContent = interview;
+    const rejected = document.querySelectorAll('[data-type="rejected"]').length
+    rejectedEl.textContent = rejected;
+    jobEl.textContent = total;
 }
+calculateCount()
 
 allCards.forEach((card) => {
     const interviewBtn = card.querySelector('.interview-btn');
