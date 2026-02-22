@@ -46,7 +46,7 @@ function calculateCount(){
     interviewEl.textContent = interview;
     const rejected = document.querySelectorAll('[data-type="rejected"]').length
     rejectedEl.textContent = rejected;
-    jobEl.textContent = total;
+    jobEl.textContent = document.querySelectorAll('#all-card-container .info-card:not(.hidden)').length;
 }
 calculateCount()
 
@@ -90,14 +90,15 @@ allCards.forEach((card) => {
 allNavBtns.forEach((navBtn => {
     navBtn.addEventListener('click', function() {
         navBtnPressed = navBtn.textContent.trim().toLowerCase();
-        console.log(navBtnPressed)
+        // console.log(navBtnPressed)
         allNavBtns.forEach((btn) => {
             btn.classList.remove('bg-[#422ad5]', 'text-white')
         })
         navBtn.classList.add('bg-[#422ad5]', 'text-white')
 
         tabFilter(navBtnPressed);
-        loadHiddenSection()
+        loadHiddenSection();
+        calculateCount();
         
 
         // this does not filter tab spontenously.
