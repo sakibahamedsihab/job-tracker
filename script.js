@@ -6,10 +6,20 @@ const jobEl = getById('jobs');
 const allNavBtns = document.querySelectorAll('#all-nav-btns button');
 const allCards = document.querySelectorAll('#all-card-container .info-card')
 
+let navBtnPressed = 'all';
 
 // TAB FILTER FUNCTION
 function tabFilter(navBtnPressed) {
+    // console.log(navBtnPressed)
+    allCards.forEach((card) => {
+        // console.log(card.getAttribute('data-type') || 'all')
 
+        if(navBtnPressed === 'all' || navBtnPressed === card.getAttribute('data-type')) {
+            card.classList.remove('hidden');
+        } else {
+            card.classList.add('hidden')
+        }
+    })
 }
 
 // CALCULATE COUNT FUNCTION
@@ -31,6 +41,7 @@ allCards.forEach((card) => {
         state.classList.add('border', 'border-green-800', 'text-green-800', 'bg-green-100');
         state.textContent = 'Interview';   
         
+        tabFilter(navBtnPressed)
         calculateCount();
     })
 
@@ -42,6 +53,7 @@ allCards.forEach((card) => {
         state.classList.add('border', 'border-red-800', 'text-red-800', 'bg-red-100')
         state.textContent = 'Rejected';
 
+        tabFilter(navBtnPressed)
         calculateCount();
     })
 
@@ -53,15 +65,17 @@ allCards.forEach((card) => {
 
 allNavBtns.forEach((navBtn => {
     navBtn.addEventListener('click', function() {
-        const navBtnPressed = navBtn.textContent.trim().toLowerCase();
+        navBtnPressed = navBtn.textContent.trim().toLowerCase();
         console.log(navBtnPressed)
         allNavBtns.forEach((btn) => {
             btn.classList.remove('bg-[#422ad5]', 'text-white')
         })
         navBtn.classList.add('bg-[#422ad5]', 'text-white')
 
-
+        tabFilter(navBtnPressed);
         
+
+        // this does not filter tab spontenously.
         // allCards.forEach((card) => {
         //     if(navBtn.textContent === 'All' || navBtn.textContent === card.getAttribute('data-type')){
         //         card.classList.remove('hidden');
