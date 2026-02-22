@@ -12,7 +12,8 @@ let navBtnPressed = 'all';
 
 // FUNCTION TO LOAD HIDDEN SECTION
 function loadHiddenSection() {
-    const currentCards = document.querySelectorAll('#all-card-container .info-card');
+    // learnt this new concept of :not(.className)
+    const currentCards = document.querySelectorAll('#all-card-container .info-card:not(.hidden)');
     
     // console.log(currentCards.length)
     if(currentCards.length === 0) {
@@ -38,7 +39,7 @@ function tabFilter(navBtnPressed) {
 
 // CALCULATE COUNT FUNCTION
 function calculateCount(){
-
+    const currentCards = document.querySelectorAll('#all-card-container .info-card')
 }
 
 allCards.forEach((card) => {
@@ -88,6 +89,7 @@ allNavBtns.forEach((navBtn => {
         navBtn.classList.add('bg-[#422ad5]', 'text-white')
 
         tabFilter(navBtnPressed);
+        loadHiddenSection()
         
 
         // this does not filter tab spontenously.
