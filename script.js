@@ -2,11 +2,25 @@ const totalEl = getById('total');
 const interviewEl = getById('interview');
 const rejectedEl = getById('rejected');
 const jobEl = getById('jobs');
+const hiddenSectionEl = getById('hidden-section')
 
 const allNavBtns = document.querySelectorAll('#all-nav-btns button');
 const allCards = document.querySelectorAll('#all-card-container .info-card')
 
 let navBtnPressed = 'all';
+
+
+// FUNCTION TO LOAD HIDDEN SECTION
+function loadHiddenSection() {
+    const currentCards = document.querySelectorAll('#all-card-container .info-card');
+    
+    // console.log(currentCards.length)
+    if(currentCards.length === 0) {
+        hiddenSectionEl.classList.remove('hidden')
+    } else {
+        hiddenSectionEl.classList.add('hidden')
+    }
+}
 
 // TAB FILTER FUNCTION
 function tabFilter(navBtnPressed) {
@@ -60,6 +74,7 @@ allCards.forEach((card) => {
     deleteBtn.addEventListener('click', function() {
         card.remove();
         calculateCount();
+        loadHiddenSection()
     })
 })
 
