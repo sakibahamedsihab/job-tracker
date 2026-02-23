@@ -9,15 +9,15 @@
     insert it into a div: document.div.appendChild(li);
 3. What is Event Bubbling? And how does it work?
     If any event occurs in any of the html element then it propogates to its parent and then its grandparent all the way to the root of the html is called event bubbling.
-
+```
     <div id="grandpanet">
         <div id="parent">
             <div id="child">
                 click
             </div>
         </div>
-    </div>
-
+ </div>
+```
     if addEventListener is called on click(child), it will then trigger parent and then grandparent after that document lastly window object.
 4. What is Event Delegation in JavaScript? Why is it useful?
 
